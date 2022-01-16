@@ -7,7 +7,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: custom-tekton-listener
-  namespace: tekton-pipelines-dev
+  namespace: custom-tekton-listener-dev
 rules:
 - apiGroups: [""]
   resources: 
@@ -29,11 +29,11 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: custom-tekton-listener
-  namespace: tekton-pipelines-dev
+  namespace: custom-tekton-listener-dev
 subjects:
 - kind: ServiceAccount
   name: custom-tekton-listener
-  namespace: tekton-pipelines-dev
+  namespace: custom-tekton-listener-dev
 roleRef:
   kind: Role 
   name: custom-tekton-listener
