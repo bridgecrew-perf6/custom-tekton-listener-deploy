@@ -1,0 +1,8 @@
+[
+   {"op": "replace", "path": "/metadata/name", "value": "custom-tekton-listener"},
+   {"op": "replace", "path": "/spec/template/spec/containers/0/name", "value": "custom-tekton-listener"},
+   {"op": "replace", "path": "/spec/template/spec/containers/0/envFrom/0/secretRef/name", "value": "custom-tekton-listener-env-vars"},
+   {"op": "replace", "path": "/spec/template/spec/containers/0/envFrom/1/configMapRef/name", "value": "custom-tekton-listener-env-vars"},
+   {"op": "replace", "path": "/spec/template/spec/serviceAccountName", "value": "custom-tekton-listener"},
+   {"op": "replace", "path": "/spec/template/spec/automountServiceAccountToken", "value": true}
+]
